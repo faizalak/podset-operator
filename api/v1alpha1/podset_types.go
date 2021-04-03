@@ -29,13 +29,14 @@ type PodSetSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of PodSet. Edit podset_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Replica int32 `json:"replica"`
 }
 
 // PodSetStatus defines the observed state of PodSet
 type PodSetStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	PodName []string `json:"podname"`
 }
 
 //+kubebuilder:object:root=true
